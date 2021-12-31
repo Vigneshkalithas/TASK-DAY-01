@@ -1,0 +1,59 @@
+The Differnce Between HTTP1.1 vs HTTP2.0
+
+HTTP 1.1:
+
+HTTP 1.1 is the latest version of Hypertext Transfer Protocol (HTTP), the World Wide Web application protocol that runs on top of the Internet's TCP/IP suite of protocols. HTTP 1.1 provides faster delivery of Web pages than the original HTTP and reduces Web traffic. Developed by a committee of the Internet Engineering Task Force (IETF) that includes the Web's chief creator Tim Berners-Lee, HTTP 1.1 is supported by the latest Web servers and browsers.
+For HTTP1 :
+ 
+Number of requests: 102
+
+Load time: 12.97s
+
+Protocol: “http/1.1”
+
+Initiator column:
+ Initiator of the first one is user/client and the rest of the requests are initiated by the response to client who realizes he needs some other resources (in this case, images).
+Waterfall diagram: We can see how requests are made through multiple batches (TCP connections).
+
+
+HTTP 2.0:
+
+In 2015, Internet Engineering Task Force (IETF) release HTTP/2, the second major version of the most useful internet protocol, HTTP. It was derived from the earlier experimental SPDY protocol.
+
+Main goals of developing HTTP/2 was:
+
+Protocol negotiation mechanism — protocol electing, eg. HTTP/1.1, HTTP/2 or other.
+High-level compatibility with HTTP/1.1 — methods, status codes, URIs and header fields.
+Page load speed improvements trough:
+Compression of request headers
+Binary protocol
+HTTP/2 Server Push
+Request multiplexing over a single TCP connection
+Request pipelining
+HOL blocking (Head-of-line) — Package blocking
+
+
+
+Request multiplexing :
+
+HTTP/2 can send multiple requests for data in parallel over a single TCP connection. This is the most advanced feature of the HTTP/2 protocol because it allows you to download web files asynchronously from one server. Most modern browsers limit TCP connections to one server.
+
+ 
+
+
+
+For HTTP2.0 With Server Push :
+
+ 
+
+Number of requests: 102
+
+Load time: 3.17 s
+
+Protocol: “h2” (HTTP/2)
+
+Initiator column: 
+
+Initiator of the first one is user/client and the rest of requests are initiated by the push of the server (virtually one request/response cycle).
+Waterfall diagram: We can see how requests are made through 1 batch (1 TCP connection).
+
